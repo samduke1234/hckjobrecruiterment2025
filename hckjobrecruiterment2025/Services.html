@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services - High Court of Karnataka</title>
+  <style>
+    :root { --brand:#002147; --nav:#0056a6; --highlight:#FFED00; }
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; background:#f4f4f9; color:#222; }
+    header { background:var(--brand); color:#fff; padding:14px; display:flex; align-items:center; gap:12px; }
+    header img { height:56px; }
+    nav { background:var(--nav); padding:10px; }
+    nav ul { list-style:none; display:flex; gap:20px; justify-content:center; margin:0; padding:0; }
+    nav a { color:#fff; text-decoration:none; padding:20px 12px; }
+    .container { max-width:900px; margin:22px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+    h1, h2 { color:var(--brand); }
+    .service-card { border:1px solid #eee; border-radius:8px; padding:16px; margin-bottom:16px; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition: transform 0.2s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,0.08); }
+    input { padding:8px; width:100%; max-width:300px; margin:10px 0; border-radius:6px; border:1px solid #ccc; }
+    button { padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff; cursor:pointer; }
+    button.primary { background:var(--nav); color:#fff; border-color:var(--nav); }
+    .msg { margin-top:10px; color:red; font-weight:bold; }
+    @media(max-width:700px) { nav ul { flex-direction:column; text-align:center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/logo.png" alt="logo">
+    <div style="font-size:18px;font-weight:800">HIGH COURT OF KARNATAKA</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="index.html">Daily Orders</a></li>
+      <li><a href="Notis.html">Notifications</a></li>
+      <li><a href="media.html">Media</a></li>
+    </ul>
+  </nav> 
+
+  <div class="container">
+    <h1>Our Services</h1>
+    <p>At the High Court of Karnataka, we are committed to ensuring justice through clear reasoning, logical analysis, and fair decision-making. Our services provide support for citizens, lawyers, and institutions alike.</p>
+
+    <div class="service-card">
+      <h3>Legal Consultation</h3>
+      <p>Professional advice for individuals and organizations. Our legal experts evaluate cases, interpret laws, and recommend actions based on evidence and logic.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Legal Aid</h3>
+      <p>Free or subsidized legal support for those who cannot afford representation, ensuring everyone has access to fair and impartial justice.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Mediation & Dispute Resolution</h3>
+      <p>Neutral mediation services help parties resolve conflicts logically and peacefully, reducing unnecessary court cases.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Case Research & Analysis</h3>
+      <p>Thorough analysis of legal precedents, facts, and statutes to support evidence-based, logical decisions in all matters of justice.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Public Legal Information</h3>
+      <p>Access to judgments, notifications, and court procedures to help citizens understand how justice is served and reasoning behind decisions.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Online Legal Tools</h3>
+      <p>Modern digital tools for tracking cases, generating legal documents, and providing reasoning-based support to citizens and legal professionals.</p>
+    </div>
+
+    <!-- Search Candidate Section -->
+    <div class="container" style="margin-top:30px;">
+      <h2>Search Candidate</h2>
+      <input type="text" id="appNo" placeholder="Enter Application Number">
+      <br>
+      <button class="primary" onclick="searchCandidate()">Search</button>
+      <div class="msg" id="msg"></div>
+    </div>
+  </div>
+
+  <script>
+    const candidates = {
+      "KCM1984GRD013132": "KCM1984GRD013132.html",
+      "KCM1984GRD012743": "KCM1984GRD012743.html",
+      "KCM1984GRD011407": "KCM1984GRD011407.html",
+      "KCM1984GRD013566": "KCM1984GRD013566.html",
+      "KCM1984GRD012920": "KCM1984GRD012920.html",
+      "KCM1984GRD012951": "KCM1984GRD012951.html"
+    };
+
+    function searchCandidate() {
+      const input = document.getElementById("appNo").value.trim();
+      const msg = document.getElementById("msg");
+      if (candidates[input]) {
+        window.open(candidates[input], "_blank");
+        msg.textContent = "";
+      } else {
+        msg.textContent = "❌ Application number not found.";
+      }
+    }
+  </script>
+</body>
+</html>
