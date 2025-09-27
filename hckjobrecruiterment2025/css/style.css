@@ -1,0 +1,173 @@
+:root {
+  --brand: #002147;
+  --nav: #0056a6;
+}
+
+/* Optional: global box-sizing for easier layout handling */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #222;
+}
+
+/* Header */
+header {
+  background: var(--brand);
+  color: #fff;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo {
+  height: 56px;
+  width: 56px;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--brand);
+}
+
+header .title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Navigation */
+nav {
+  background: var(--nav);
+  padding: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+/* Notice */
+.notice {
+  background: #2BA10A;
+  color: #FEFEFE;
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 2px solid #b30000;
+}
+
+.notice marquee {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* Main Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.010);
+  }
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Button styling */
+button.primary {
+    background: #4a90e2;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.primary:hover {
+    background: #357ABD;
+    transform: translateY(-2px);
+}
+
+.top {
+  display: flex;
+  gap: 30px;
+}
+
+.meta {
+  flex: 10;
+}
+
+.meta h2 {
+  margin: 0 0 6px 0;
+  color: var(--brand);
+}
+
+.meta p {
+  margin: 4px 0;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Controls */
+.controls {
+  margin-top: 14px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--nav);
+  color: #fff;
+  border-color: var(--nav);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .top {
+    flex-direction: column;
+  }
+}
